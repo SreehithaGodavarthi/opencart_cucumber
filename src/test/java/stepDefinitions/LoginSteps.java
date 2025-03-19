@@ -27,7 +27,8 @@ public class LoginSteps {
      
    
     @Given("the user navigates to login page")
-    public void user_navigate_to_login_page() {
+    public void user_navigate_to_login_page() 
+    {
     	
     	BaseClass.getLogger().info("Goto my account-->Click on Login.. ");
     	hp=new HomePage(BaseClass.getDriver());
@@ -39,7 +40,8 @@ public class LoginSteps {
 
  
     @When("user enters email as {string} and password as {string}")
-    public void user_enters_email_as_and_password_as(String email, String pwd) {
+    public void user_enters_email_as_and_password_as(String email, String pwd) 
+    {
     	BaseClass.getLogger().info("Entering email and password.. ");
     	
     	lp=new LoginPage(BaseClass.getDriver());
@@ -48,7 +50,8 @@ public class LoginSteps {
         }
 
     @When("the user clicks on the Login button")
-    public void click_on_login_button() {
+    public void click_on_login_button() 
+    {
         lp.clickLogin();
         BaseClass.getLogger().info("clicked on login button...");
     	
@@ -57,7 +60,8 @@ public class LoginSteps {
 
 
     @Then("the user should be redirected to the MyAccount Page")
-    public void user_navigates_to_my_account_page() {
+    public void user_navigates_to_my_account_page() 
+    {
     	macc=new MyAccountPage(BaseClass.getDriver());
 		boolean targetpage=macc.isMyAccountPageExists();
 				
